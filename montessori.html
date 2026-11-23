@@ -173,7 +173,13 @@
             <i data-lucide="history" class="w-4 h-4 text-terracotta-500"></i>
             <span>Kelib chiqishi</span>
           </div>
-          <h2 class="text-2xl sm:text-3xl font-bold text-sand-900">Maria Montessori kim edi?</h2>
+          <figure class="flex items-center gap-4">
+            <img src="rasmlar/1795416025848_MariaMontessori.jpg" alt="Maria Montessori portreti" class="w-28 h-36 sm:w-32 sm:h-40 rounded-2xl object-cover object-top shadow-md border-4 border-white shrink-0" />
+            <figcaption>
+              <h2 class="text-2xl sm:text-3xl font-bold text-sand-900">Maria Montessori kim edi?</h2>
+              <p class="text-xs text-sand-700 mt-1">Maria Montessori (1870–1952)</p>
+            </figcaption>
+          </figure>
           <p class="text-sm sm:text-base text-sand-800 leading-relaxed">
             <strong>Maria Montessori</strong> (1870–1952) — italyan shifokori, pedagog va olim. U Italiyada tibbiyot bo'yicha
             ta'lim olgan ilk ayollardan biri bo'lgan. Shifokor sifatida rivojlanishida qiyinchiligi bor bolalar bilan ishlab,
@@ -370,41 +376,41 @@
   </footer>
 
   <script>
-    // Rasm o'rniga chiroyli monogramma (bosh harflar) ishlatiladi.
-    // Haqiqiy portret qo'shmoqchi bo'lsangiz: photo: 'rasmlar/fayl.jpg' deb yozing (litsenziyasi ochiq rasm).
+    // photo: rasm yo'li, pos: rasmning qaysi qismi ko'rinishi (object-position), zoom/origin: kerak bo'lsa yaqinlashtirish.
+    // photo bo'lmasa, bosh harflar (monogramma) ko'rsatiladi.
     const ALUMNI = [
-      { name: 'Larri Peyj va Sergey Brin', role: 'Google asoschilari', icon: 'search', color: 'sage',
+      { name: 'Larri Peyj va Sergey Brin', photo: 'rasmlar/1795416025849_PeyjvaBrin.jpg', pos: '50% 35%', role: 'Google asoschilari', icon: 'search', color: 'sage',
         text: 'Ikkalasi ham bolaligida Montessori maktabiga borgan va o\'z muvaffaqiyatida bu ta\'limning hissasi katta ekanini ko\'p bor aytishgan.' },
-      { name: 'Jeff Bezos', role: 'Amazon asoschisi', icon: 'package', color: 'terracotta',
+      { name: 'Jeff Bezos', photo: 'rasmlar/1795416025854_Bezos.jpg', pos: '55% 25%', role: 'Amazon asoschisi', icon: 'package', color: 'terracotta',
         text: 'Ikki yoshida Montessori bog\'chasiga borgan. Onasining aytishicha, u mashg\'ulotga shunchalik berilib ketardiki, tarbiyachilar uni stulidan ko\'tarib boshqa ishga o\'tkazishgan.' },
-      { name: 'Jimmi Uels', role: 'Vikipediya asoschisi', icon: 'book-open', color: 'amber',
+      { name: 'Jimmi Uels', photo: 'rasmlar/1795416025856_Jimmi%20Uels.jpeg', pos: '85% 30%', zoom: 1.7, origin: '95% 35%', role: 'Vikipediya asoschisi', icon: 'book-open', color: 'amber',
         text: 'Montessori yondashuvidagi maktabda o\'qigan. Kitob o\'qishga muhabbati va bilimga chanqoqligini shu ta\'lim bilan bog\'laydi.' },
-      { name: 'Gabriel Garsia Markes', role: 'Yozuvchi, Nobel mukofoti sovrindori', icon: 'feather', color: 'purple',
+      { name: 'Gabriel Garsia Markes', photo: 'rasmlar/1795416025855_GarsiaMarkes.jpg', pos: '45% 30%', role: 'Yozuvchi, Nobel mukofoti sovrindori', icon: 'feather', color: 'purple',
         text: 'Kolumbiyalik buyuk adib bolaligida Montessori maktabida o\'qigan va bu haqda o\'zining xotiralar kitobida iliq so\'zlar bilan yozgan.' },
-      { name: 'Uill Rayt', role: 'SimCity va The Sims o\'yinlari yaratuvchisi', icon: 'gamepad-2', color: 'sky',
+      { name: 'Uill Rayt', photo: 'rasmlar/1795416025851_UillRayt.jpg', pos: '50% 30%', role: 'SimCity va The Sims o\'yinlari yaratuvchisi', icon: 'gamepad-2', color: 'sky',
         text: 'Mashhur o\'yin dizayneri o\'zini «Montessori bolasi» deb ataydi: kashf qilish orqali o\'rganish g\'oyasi uning o\'yinlariga ham ko\'chgan.' },
-      { name: 'Julia Child', role: 'Mashhur oshpaz va teleboshlovchi', icon: 'chef-hat', color: 'terracotta',
+      { name: 'Julia Child', photo: 'rasmlar/1795416025856_JuliaChild.jpg', pos: '50% 25%', role: 'Mashhur oshpaz va teleboshlovchi', icon: 'chef-hat', color: 'terracotta',
         text: 'Bolaligida Montessori maktabiga borgan. Amaliy hayot mashg\'ulotlari — qo\'l bilan ishlash muhabbati uning kasbiga aylangan.' },
-      { name: 'Piter Druker', role: 'Zamonaviy menejment asoschisi', icon: 'briefcase', color: 'sage',
+      { name: 'Piter Druker', photo: 'rasmlar/1795416025850_PiterDruker.jpg', pos: '50% 20%', role: 'Zamonaviy menejment asoschisi', icon: 'briefcase', color: 'sage',
         text: 'Venada o\'sgan va bolaligida Montessori ta\'limini olgan. Uni «zamonaviy menejmentning otasi» deb atashadi.' },
-      { name: 'Anna Frank', role: 'Mashhur kundalik muallifi', icon: 'notebook-pen', color: 'amber',
+      { name: 'Anna Frank', photo: 'rasmlar/1795416025852_AnnaFrank.jpg', pos: '50% 20%', role: 'Mashhur kundalik muallifi', icon: 'notebook-pen', color: 'amber',
         text: 'Amsterdamdagi Montessori maktabida o\'qigan. Uning kundaligi dunyodagi eng ko\'p o\'qilgan kitoblardan biriga aylangan.' },
-      { name: 'Shahzoda Uilyam va Garri', role: 'Britaniya qirollik oilasi', icon: 'crown', color: 'purple',
+      { name: 'Shahzoda Uilyam va Garri', photo: 'rasmlar/1795416025851_UilyamvaGarri.jpg', pos: '72% 15%', zoom: 1.5, origin: '88% 20%', role: 'Britaniya qirollik oilasi', icon: 'crown', color: 'purple',
         text: 'Britaniya shahzodalari ham Montessori bog\'chasiga borgan. Keyinchalik shahzoda Uilyamning o\'g\'li Jorj ham Montessori bog\'chasiga qatnagan.' }
     ];
 
     const SUPPORTERS = [
-      { name: 'Aleksandr Grem Bell', role: 'Telefon ixtirochisi', icon: 'phone',
+      { name: 'Aleksandr Grem Bell', photo: 'rasmlar/1795416025853_Bell.jpg', pos: '50% 15%', role: 'Telefon ixtirochisi', icon: 'phone',
         text: 'Rafiqasi Meybl bilan birga o\'z uylarida Montessori sinfi ochgan. 1913-yilda Amerika Montessori ta\'lim assotsiatsiyasining birinchi prezidenti bo\'lgan.' },
-      { name: 'Tomas Edison', role: 'Ixtirochi', icon: 'lightbulb',
+      { name: 'Tomas Edison', photo: 'rasmlar/1795416025854_Edison.jpg', pos: '50% 20%', role: 'Ixtirochi', icon: 'lightbulb',
         text: 'Montessori usulini ochiq olqishlagan va Maria Montessorining Amerikaga safari paytida uni qo\'llab-quvvatlagan.' },
-      { name: 'Xelen Keller', role: 'Yozuvchi, faol jamoat arbobi', icon: 'hand-heart',
+      { name: 'Xelen Keller', photo: 'rasmlar/1795416025852_XelenKeller.jpg', pos: '50% 15%', role: 'Yozuvchi, faol jamoat arbobi', icon: 'hand-heart',
         text: 'Ko\'zi ojiz va qulog\'i eshitmaydigan bo\'lib, dunyoga tanilgan Keller Montessori usuliga yuqori baho bergan.' },
-      { name: 'Mahatma Gandi', role: 'Hindiston milliy yetakchisi', icon: 'globe',
+      { name: 'Mahatma Gandi', photo: 'rasmlar/1795416025855_Gandi.jpg', pos: '50% 15%', role: 'Hindiston milliy yetakchisi', icon: 'globe',
         text: '1931-yilda Londonda Maria Montessori bilan uchrashgan va uning bolaga hurmatga asoslangan ta\'limini tinchlik g\'oyasi bilan bog\'lagan.' },
-      { name: 'Jan Piaje', role: 'Shveytsariyalik psixolog', icon: 'brain',
+      { name: 'Jan Piaje', photo: 'rasmlar/1795416025850_Piaje.jpg', pos: '50% 20%', role: 'Shveytsariyalik psixolog', icon: 'brain',
         text: 'Bolalar tafakkurining rivojlanishini o\'rgangan mashhur olim Shveytsariya Montessori jamiyatiga rahbarlik qilgan.' },
-      { name: 'Zigmund va Anna Freyd', role: 'Psixologiya olimlari', icon: 'microscope',
+      { name: 'Zigmund va Anna Freyd', photo: 'rasmlar/1795416025854_Freydlar.jpg', pos: '50% 12%', role: 'Psixologiya olimlari', icon: 'microscope',
         text: 'Venadagi Montessori maktablarini qo\'llab-quvvatlashgan; Anna Freyd bolalar psixologiyasida bu g\'oyalardan foydalangan.' }
     ];
 
@@ -433,29 +439,45 @@
               </div>`;
     }
 
-    document.getElementById('alumniGrid').innerHTML = ALUMNI.map(p => `
-      <article class="bg-white p-5 rounded-3xl border border-sand-200 shadow-sm space-y-3">
-        <div class="flex items-center gap-4">
-          ${avatar(p, false)}
-          <div>
-            <h3 class="font-bold text-sand-900 leading-snug">${p.name}</h3>
-            <div class="text-xs font-semibold text-terracotta-600 mt-0.5">${p.role}</div>
-          </div>
-        </div>
-        <p class="text-sm text-sand-700 leading-relaxed">${p.text}</p>
-      </article>`).join('');
+    function photoBlock(p, dark) {
+      const z = p.zoom ? `transform:scale(${p.zoom});transform-origin:${p.origin || 'center'};` : '';
+      return `<div class="relative h-60 overflow-hidden ${dark ? 'bg-sand-800' : 'bg-sand-100'}">
+                <img src="${p.photo}" alt="${p.name}" loading="lazy" class="w-full h-full object-cover" style="object-position:${p.pos || 'center 25%'};${z}" />
+                <span class="absolute top-3 left-3 w-9 h-9 rounded-full ${dark ? 'bg-terracotta-500 text-white' : 'bg-white/90 text-sand-800'} flex items-center justify-center shadow">
+                  <i data-lucide="${p.icon}" class="w-4 h-4"></i>
+                </span>
+              </div>`;
+    }
 
-    document.getElementById('supportersGrid').innerHTML = SUPPORTERS.map(p => `
-      <article class="bg-white/5 border border-white/10 p-5 rounded-3xl space-y-3">
+    function card(p, dark) {
+      const box = dark ? 'bg-white/5 border border-white/10' : 'bg-white border border-sand-200 shadow-sm';
+      const nameCls = dark ? 'text-white' : 'text-sand-900';
+      const roleCls = dark ? 'text-terracotta-500' : 'text-terracotta-600';
+      const textCls = dark ? 'text-sand-200' : 'text-sand-700';
+      if (p.photo) {
+        return `<article class="${box} rounded-3xl overflow-hidden">
+          ${photoBlock(p, dark)}
+          <div class="p-5 space-y-2">
+            <h3 class="font-bold ${nameCls} leading-snug">${p.name}</h3>
+            <div class="text-xs font-semibold ${roleCls}">${p.role}</div>
+            <p class="text-sm ${textCls} leading-relaxed">${p.text}</p>
+          </div>
+        </article>`;
+      }
+      return `<article class="${box} p-5 rounded-3xl space-y-3">
         <div class="flex items-center gap-4">
-          ${avatar(p, true)}
+          ${avatar(p, dark)}
           <div>
-            <h3 class="font-bold text-white leading-snug">${p.name}</h3>
-            <div class="text-xs font-semibold text-terracotta-500 mt-0.5">${p.role}</div>
+            <h3 class="font-bold ${nameCls} leading-snug">${p.name}</h3>
+            <div class="text-xs font-semibold ${roleCls} mt-0.5">${p.role}</div>
           </div>
         </div>
-        <p class="text-sm text-sand-200 leading-relaxed">${p.text}</p>
-      </article>`).join('');
+        <p class="text-sm ${textCls} leading-relaxed">${p.text}</p>
+      </article>`;
+    }
+
+    document.getElementById('alumniGrid').innerHTML = ALUMNI.map(p => card(p, false)).join('');
+    document.getElementById('supportersGrid').innerHTML = SUPPORTERS.map(p => card(p, true)).join('');
 
     lucide.createIcons();
   </script>
