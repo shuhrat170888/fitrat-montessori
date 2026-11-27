@@ -1268,7 +1268,7 @@
         return;
       }
 
-      const isShorts = rawUrl.includes('/shorts/') || !rawUrl.includes('watch?v=');
+      const isShorts = /\/shorts\//.test(rawUrl) || !rawUrl.includes('watch?v=');
       const cleanTitle = rawTitle || `Fitrat Montessori video (${videoId})`;
       const existing = state.videos.find((v) => v.id === videoId);
       if (!existing) {
